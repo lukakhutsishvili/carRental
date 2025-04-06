@@ -6,7 +6,7 @@ function SearchPage() {
   const [filters, setFilters] = useState({});
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div className="mt-5 grid grid-cols-1 md:grid-cols-3 gap-4">
       <CarList filters={filters} />
     </div>
   );
