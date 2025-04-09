@@ -1,27 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useParams } from "react-router-dom";
 import BookingForm from "./BookingForm";
+import { Context } from "../App";
 
-const mockCarData = {
-  id: "1",
-  make: "Infiniti",
-  model: "Q50",
-  engine: "2.0L Turbo",
-  transmition: "Automatic",
-  seats: 5,
-  price: 80,
-  images: [
-    "/lexus/754d127f-316b-448a-9d64-ff993dcdb567.jfif",
-    "/lexus/b74f6928-213a-40b2-ae26-c805fee00a71.jfif",
-    "/lexus/download.jfif",
-    "/lexus/f1e0b82d-e6ed-4da7-9d7a-1939ff6dd8a2.jfif",
-  ],
-};
+const mockCarData = {};
 
 function CarDetailsPage() {
   const { id } = useParams();
+  const { cars } = useContext(Context);
 
-  const car = mockCarData;
+  const car = cars.find((carID) => carID.id == id);
   const [selectedImage, setSelectedImage] = useState(car.images[0]);
 
   return (

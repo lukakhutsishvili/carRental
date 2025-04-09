@@ -1,35 +1,14 @@
 // components/CarList.js
-import React from "react";
+import React, { useContext } from "react";
 import CarCard from "./CarCard";
+import { Context } from "../App";
+import { useParams } from "react-router-dom";
 
 function CarList() {
-  const cars = [
-    {
-      id: 1,
-      make: "Toyota",
-      model: "Camry",
-      image: "lexus/754d127f-316b-448a-9d64-ff993dcdb567.jfif",
-      price: 50,
-      transmition: "mechanic",
-      engine: "kafut",
-      seats: "7",
-    },
-    {
-      id: 2,
-      make: "Honda",
-      model: "Civic",
-      image: "/lexus/download.jfif",
-      price: 45,
-    },
-    {
-      id: 3,
-      make: "Honda",
-      model: "Civic",
-      image: "public/lexus/754d127f-316b-448a-9d64-ff993dcdb567.jfif",
-      price: 85,
-    },
-  ];
+  const { id } = useParams();
+  const { cars } = useContext(Context);
 
+  const car = cars.find((carID) => carID.id == id);
   return (
     <>
       {cars.map((car) => (

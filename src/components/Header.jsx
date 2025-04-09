@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../App";
+import { Context } from "../App";
+import { t } from "i18next";
 import { useTranslation } from "react-i18next";
 
 function Header() {
-  const { user, setUser } = useContext(AuthContext);
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 
   const changeLanguage = (lng) => {
@@ -27,7 +27,7 @@ function Header() {
             to="/profile"
             className="hover:text-gray-400 transition-colors duration-200"
           >
-            {t("about_us")}
+            {t("about us")}
           </Link>
           <Link
             to="/admin"
@@ -43,7 +43,7 @@ function Header() {
               onClick={() => setIsOpen(!isOpen)}
               className="w-[128px] bg-gray-800 hover:bg-gray-700 px-3 py-1 rounded text-sm transition duration-200"
             >
-              {t("en")} ▾
+              {i18n.language} ▾
             </button>
             {isOpen && (
               <div className="absolute right-0 mt-2 bg-white text-black rounded shadow-md z-10 w-32">
