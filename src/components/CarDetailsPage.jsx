@@ -1,19 +1,26 @@
 import React, { useContext, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import BookingForm from "./BookingForm";
 import { Context } from "../App";
-
-const mockCarData = {};
 
 function CarDetailsPage() {
   const { id } = useParams();
   const { cars } = useContext(Context);
+  const navigate = useNavigate();
 
   const car = cars.find((carID) => carID.id == id);
   const [selectedImage, setSelectedImage] = useState(car.images[0]);
 
   return (
     <div className="max-w-4xl mx-auto p-4 space-y-6">
+      {/* Back Button */}
+      <button
+        onClick={() => navigate(-1)}
+        className="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-md text-sm text-gray-700"
+      >
+        ← Back
+      </button>
+
       <h2 className="text-3xl font-bold text-gray-800">
         {car.make} {car.model}
       </h2>

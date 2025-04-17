@@ -1,40 +1,99 @@
 [
   {
     "id": "1",
-    "make": "Infiniti",
-    "model": "Q50",
-    "engine": "2.0L Turbo",
+    "make": "LEXUS",
+    "model": "GX460",
+    "engine": "4.6",
     "transmition": "Automatic",
-    "image": "/lexus/754d127f-316b-448a-9d64-ff993dcdb567.jfif",
-    "seats": 5,
-    "price": 80,
+    "image": "/lexus1/download.jfif",
+    "seats": 7,
+    "price": 100,
     "images": [
-      "/lexus/754d127f-316b-448a-9d64-ff993dcdb567.jfif",
-      "/lexus/b74f6928-213a-40b2-ae26-c805fee00a71.jfif",
-      "/lexus/download.jfif",
-      "/lexus/f1e0b82d-e6ed-4da7-9d7a-1939ff6dd8a2.jfif"
+      "/lexus1/download.jfif",
+      "/lexus1/754d127f-316b-448a-9d64-ff993dcdb567.jfif",
+      "/lexus1/b74f6928-213a-40b2-ae26-c805fee00a71.jfif",
+      "/lexus1/f1e0b82d-e6ed-4da7-9d7a-1939ff6dd8a2.jfif"
     ]
   },
   {
     "id": "2",
-    "make": "Toyota",
-    "model": "Camry",
-    "image": "lexus/754d127f-316b-448a-9d64-ff993dcdb567.jfif",
-    "price": 50,
-    "transmition": "mechanic",
-    "engine": "kafut",
+    "make": "LEXUS",
+    "model": "GX460 ",
+    "image": "/lexux2/e8103979-defc-401f-bd18-ce58a362d0f2.jfif",
+    "price": 70,
+    "transmition": "Automatic",
+    "engine": "4.6",
     "seats": "7",
-    "images": []
+    "images": [
+      "/lexux2/e8103979-defc-401f-bd18-ce58a362d0f2.jfif",
+      "/lexux2/8ab71b78-2559-47ea-8fb1-00715f5b4743.jfif",
+      "/lexux2/389a13a3-5a38-466f-b0aa-71bd5cf28ca4.jfif",
+      "/lexux2/8ab71b78-2559-47ea-8fb1-00715f5b4743.jfif",
+      "/lexux2/ebbdfe28-d95a-4417-aaef-bb86070302a5.jfif"
+    ]
   },
   {
     "id": "3",
-    "make": "Toyota",
-    "model": "Camry",
-    "image": "lexus/754d127f-316b-448a-9d64-ff993dcdb567.jfif",
-    "price": 50,
-    "transmition": "mechanic",
-    "engine": "kafut",
+    "make": "BMW",
+    "model": "X5",
+    "image": "/X5/33a2e9ac-9ebd-40eb-a517-f6841f884982.jfif",
+    "price": 60,
+    "transmition": "Automatic",
+    "engine": "3.0 Turbo ",
     "seats": "7",
-    "images": []
+    "images": [
+      "/X5/33a2e9ac-9ebd-40eb-a517-f6841f884982.jfif",
+      "/X5/7e8a80a2-344a-4fae-96c5-0d0c3d74ddad.jfif",
+      "/X5/a6b575e0-a3bf-49d6-8f3d-7f11f9a18bb6.jfif",
+      "/X5/asdfdsfs.jfif",
+      "/X5/dcfsd.jfif",
+      "/X5/a53c4e76-49f1-4cd3-85fd-dd7a564fe12e.jfif"
+    ]
+  },
+  {
+    "id": "4",
+    "make": "TOYOTA",
+    "model": "C-HR",
+    "image": "/Toyta CH-R/3f4619de-8ad5-4a78-9cfa-bf16b2236487.jfif",
+    "price": 60,
+    "transmition": "Automatic",
+    "engine": "1.8 ",
+    "seats": "5",
+    "images": [
+      "/Toyta CH-R/6ac48e1b-429c-4b0a-82fb-775fd4f12a29.jfif",
+      "/Toyta CH-R/88cd81b2-fd0f-46a0-8123-87f09d3ee21f.jfif"
+    ]
+  },
+  {
+    "id": "5",
+    "make": "NISSAN",
+    "model": "KICKS",
+    "image": "/nissan/86e28f4f-e8dc-417d-87c6-4bc85dc3f5bc.jfif",
+    "price": 55,
+    "transmition": "Automatic",
+    "engine": "1.3",
+    "seats": "5",
+    "images": [
+      "/nissan/86e28f4f-e8dc-417d-87c6-4bc85dc3f5bc.jfif",
+      "/nissan/1eefe5ba-4839-4f40-9d22-14c23cbcd9f9.jfif",
+      "/nissan/92af58e5-9e91-4adf-af7b-0442abce2803.jfif",
+      "/nissan/61341b7b-74c0-4680-ab95-85ecaf9a8a18.jfif",
+      "/nissan/c0686be2-7251-4230-bc0d-563321a489df.jfif"
+    ]
+  },
+  {
+    "id": "6",
+    "make": "TOYOTA",
+    "model": "PRIUS",
+    "image": "/TOYOTA PRIUS/2a29c56d-2c29-4f8b-a716-19944301c31f.jfif",
+    "price": 55,
+    "transmition": "Automatic",
+    "engine": "1.3",
+    "seats": "5",
+    "images": [
+      "/TOYOTA PRIUS/2a29c56d-2c29-4f8b-a716-19944301c31f.jfif",
+      "/TOYOTA PRIUS/8a7bf906-251e-4e69-9086-783858998649.jfif",
+      "/TOYOTA PRIUS/9510eb11-9aee-47a5-9210-4f72067de9e8.jfif"
+    ]
   }
 ]

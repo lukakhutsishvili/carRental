@@ -1,5 +1,5 @@
-import React, { useState, createContext, lazy, Suspense } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import React, { useState, createContext, lazy, Suspense, useEffect } from "react";
+import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import data from "./data.json";
@@ -18,12 +18,18 @@ function App() {
   const [user, setUser] = useState(true);
   const [cars, setCars] = useState(data);
 
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [pathname]);
+
   console.log(cars);
 
   return (
     <Context.Provider value={{ user, setUser, cars }}>
       <Header />
-      <main className="bg-black min-h-screen p-4 bg">
+      <main className="px-20 bg-black min-h-screen p-4 bg">
         <Suspense fallback={<div>Loading...</div>}>
           <Routes>
             <Route path="/" element={<SearchPage />} />

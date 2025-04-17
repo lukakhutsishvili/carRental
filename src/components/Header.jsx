@@ -1,11 +1,9 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Context } from "../App";
-import { t } from "i18next";
 import { useTranslation } from "react-i18next";
 
 function Header() {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 
   const changeLanguage = (lng) => {
@@ -14,54 +12,65 @@ function Header() {
   };
 
   return (
-    <header className="bg-black text-white shadow-md">
-      <nav className="container mx-auto px-4 py-3 flex justify-between items-center">
-        <Link
-          to="/"
-          className="text-2xl font-semibold tracking-wide hover:text-gray-300 transition-colors duration-200"
-        >
-          Logo
-        </Link>
-        <div className="flex items-center gap-6 text-sm">
+    <header className="bg-black text-white shadow-md sticky top-0 z-50">
+      <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
+        {/* Logo */}
+        <img className="h-[50px]" src="/logo/photo_2025-04-13_15-16-21.jpg" />
+
+        {/* Navigation */}
+        <div className="flex items-center gap-8 text-base font-semibold">
           <Link
             to="/profile"
-            className="hover:text-gray-400 transition-colors duration-200"
+            className="hover:text-gray-300 transition duration-200 text-lg"
           >
             {t("about us")}
           </Link>
-          <Link
-            to="/admin"
-            className="hover:text-gray-400 transition-colors duration-200"
+          <a
+            href="#reviews"
+            className="hover:text-gray-300 transition duration-200 text-lg"
+            onClick={() => setIsOpen(false)}
           >
             {t("reviews")}
-          </Link>
-          <div className="text-gray-300">ლარი | დოლარი | ევრო</div>
+          </a>
+          <a
+            href="#cars"
+            className="hover:text-gray-300 transition duration-200 text-lg"
+            onClick={() => setIsOpen(false)}
+          >
+            {t("CARS")}
+          </a>
+
+          {/* Currency Section */}
+          {/* <span className="text-gray-400 hidden sm:block text-lg">
+            ლარი | დოლარი | ევრო
+          </span> */}
 
           {/* Language Dropdown */}
           <div className="relative">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="w-[128px] bg-gray-800 hover:bg-gray-700 px-3 py-1 rounded text-sm transition duration-200"
+              className="w-36 bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-md flex justify-between items-center text-lg transition duration-200"
             >
-              {i18n.language} ▾
+              {i18n.language.toUpperCase()} <span className="ml-2">▾</span>
             </button>
+
             {isOpen && (
-              <div className="absolute right-0 mt-2 bg-white text-black rounded shadow-md z-10 w-32">
+              <div className="absolute right-0 mt-2 w-36 bg-gray-800 text-black rounded-lg shadow-xl overflow-hidden z-50">
                 <button
                   onClick={() => changeLanguage("en")}
-                  className="block w-full text-left px-4 py-2 hover:bg-gray-200"
+                  className="block text-white w-full px-4 py-2 text-left hover:bg-gray-400 text-base"
                 >
                   English
                 </button>
                 <button
                   onClick={() => changeLanguage("ka")}
-                  className="block w-full text-left px-4 py-2 hover:bg-gray-200"
+                  className="block text-white w-full px-4 py-2 text-left hover:bg-gray-400 text-base"
                 >
                   ქართული
                 </button>
                 <button
                   onClick={() => changeLanguage("ru")}
-                  className="block w-full text-left px-4 py-2 hover:bg-gray-200"
+                  className="block text-white w-full px-4 py-2 text-left hover:bg-gray-400 text-base"
                 >
                   Русский
                 </button>

@@ -19,6 +19,17 @@ const reviews = [
     rating: 5,
     review: "Exceeded my expectations. Will definitely purchase again!",
   },
+  {
+    name: "John Smith",
+    rating: 4,
+    review:
+      "Very good, but there’s a bit of room for improvement in packaging.",
+  },
+  {
+    name: "Emily Carter",
+    rating: 5,
+    review: "Exceeded my expectations. Will definitely purchase again!",
+  },
 ];
 
 // Separated StarRating for reusability and cleanliness
@@ -59,8 +70,8 @@ const ReviewCard = ({ name, rating, review, index }) => {
 
 export default function ReviewsPage() {
   return (
-    <section className="max-w-5xl mx-auto px-4 py-12">
-      <h2 className="text-3xl font-bold mb-8 text-center text-gray-900">
+    <section id="reviews" className="max-w-5xl mx-auto px-4 py-12">
+      <h2 className="text-3xl font-bold mb-8 text-center text-white">
         What Our Customers Are Saying
       </h2>
       <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
