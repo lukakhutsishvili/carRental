@@ -29,7 +29,7 @@ function App() {
   return (
     <Context.Provider value={{ user, setUser, cars }}>
       <Header />
-      <main className="px-20 bg-black min-h-screen p-4 bg">
+      <main className=" md:px-20 bg-black min-h-screen p-4 bg">
         <Suspense fallback={<div>Loading...</div>}>
           <Routes>
             <Route path="/" element={<SearchPage />} />

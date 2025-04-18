@@ -4,7 +4,6 @@ import Welcome from "./Welcome";
 import ReviewsPage from "./Reviews";
 import CarBrands from "./CarBrands";
 import AboutUs from "./AboutUs";
-// import MapComponent from "./MapComponent"; // integrate with map api.
 
 function SearchPage() {
   const [filters, setFilters] = useState({});
@@ -12,25 +11,34 @@ function SearchPage() {
   return (
     <>
       <Welcome />
-      <CarBrands />
-      <div id="cars" className="flex justify-center mt-5 pb-4">
-        <h1 className="text-3xl md:text-4xl font-bold text-purple-500 tracking-wide ">
-          Featured Cars
-        </h1>
-      </div>
-      <div className="bg-black mt-5 grid grid-cols-1 md:grid-cols-3 gap-4">
-        <CarList filters={filters} />
-      </div>
+
+      <section className="py-8 px-4 md:px-6 lg:px-8">
+        <CarBrands />
+      </section>
+
+      <section id="cars" className="container mx-auto px-4 md:px-6 lg:px-8">
+        <div className="text-center mt-8">
+          <h1 className="text-3xl md:text-4xl font-bold text-purple-600 tracking-wide">
+            Featured Cars
+          </h1>
+        </div>
+
+        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <CarList filters={filters} />
+        </div>
+      </section>
+
+      {/* WhatsApp Floating Button */}
       <a
         href="https://wa.me/995591945050?text=I'm%20interested%20in%20renting%20a%20car!"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-5 right-5 z-50 bg-green-500 p-3 rounded-full shadow-lg hover:bg-green-600 transition"
+        className="fixed bottom-5 right-5 z-50 bg-green-500 p-3 rounded-full shadow-md hover:bg-green-600 transition-colors duration-300"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="36"
-          height="36"
+          width="28"
+          height="28"
           viewBox="0 0 32 32"
           fill="white"
         >
@@ -38,8 +46,13 @@ function SearchPage() {
         </svg>
       </a>
 
-      <ReviewsPage />
-      <AboutUs />
+      <section className="py-10 bg-gray-100 mt-12">
+        <ReviewsPage />
+      </section>
+
+      <section className="py-10 bg-white">
+        <AboutUs />
+      </section>
     </>
   );
 }
