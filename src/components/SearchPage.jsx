@@ -50,9 +50,7 @@ function SearchPage() {
         <ReviewsPage />
       </section>
 
-      <section className="py-10 bg-white">
-        <AboutUs />
-      </section>
+      <AboutUs />
     </>
   );
 }
