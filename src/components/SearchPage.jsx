@@ -3,6 +3,7 @@ import CarList from "./CarList";
 import Welcome from "./Welcome";
 import ReviewsPage from "./Reviews";
 import CarBrands from "./CarBrands";
+import AboutUs from "./AboutUs";
 // import MapComponent from "./MapComponent"; // integrate with map api.
 
 function SearchPage() {
@@ -21,7 +22,7 @@ function SearchPage() {
         <CarList filters={filters} />
       </div>
       <a
-        href="https://wa.me/1234567890?text=I'm%20interested%20in%20renting%20a%20car!"
+        href="https://wa.me/995591945050?text=I'm%20interested%20in%20renting%20a%20car!"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-5 right-5 z-50 bg-green-500 p-3 rounded-full shadow-lg hover:bg-green-600 transition"
@@ -38,6 +39,7 @@ function SearchPage() {
       </a>
 
       <ReviewsPage />
+      <AboutUs />
     </>
   );
 }

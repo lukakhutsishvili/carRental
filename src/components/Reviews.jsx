@@ -71,7 +71,7 @@ const ReviewCard = ({ name, rating, review, index }) => {
 export default function ReviewsPage() {
   return (
     <section id="reviews" className="max-w-5xl mx-auto px-4 py-12">
-      <h2 className="text-3xl font-bold mb-8 text-center text-white">
+      <h2 className="text-3xl font-bold mb-8 text-center text-purple-500 ">
         What Our Customers Are Saying
       </h2>
       <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">

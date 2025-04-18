@@ -19,12 +19,13 @@ function Header() {
 
         {/* Navigation */}
         <div className="flex items-center gap-8 text-base font-semibold">
-          <Link
-            to="/profile"
+          <a
+            href="#AboutUs"
             className="hover:text-gray-300 transition duration-200 text-lg"
+            onClick={() => setIsOpen(false)}
           >
-            {t("about us")}
-          </Link>
+            {t("About Us")}
+          </a>
           <a
             href="#reviews"
             className="hover:text-gray-300 transition duration-200 text-lg"
