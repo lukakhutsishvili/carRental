@@ -40,7 +40,7 @@ export default function CarBrands() {
         {/* Brands Slider */}
         <div
           ref={scrollRef}
-          className="flex gap-6 overflow-x-auto scroll-smooth px-6 py-2 w-full no-scrollbar"
+          className="flex gap-6 overflow-x-auto scroll-smooth md:px-6 py-2 w-full no-scrollbar"
         >
           {brands.map((brand) => (
             <div
