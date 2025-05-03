@@ -41,12 +41,12 @@ function Header() {
 
           {/* Language Dropdown */}
           <div className="relative">
-            <button
+            {/* <button
               onClick={() => setIsOpen(!isOpen)}
               className="w-36 bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-md flex justify-between items-center text-lg transition duration-200"
             >
               {i18n.language.toUpperCase()} <span className="ml-2">▾</span>
-            </button>
+            </button> */}
 
             {isOpen && (
               <div

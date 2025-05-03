@@ -26,3 +26,12 @@ input[type="number"]::-webkit-outer-spin-button {
 html {
   scroll-behavior: smooth;
 }
+
+.custom-scrollbar-hide {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.custom-scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
