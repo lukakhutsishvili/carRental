@@ -4,6 +4,8 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import data from "./data.json";
 import "./i18n/i18n";
+import { Analytics } from "@vercel/analytics/react";
+
 
 const SearchPage = lazy(() => import("./components/SearchPage"));
 const CarDetailsPage = lazy(() => import("./components/CarDetailsPage"));
